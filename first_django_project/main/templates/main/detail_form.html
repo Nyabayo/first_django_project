@@ -1,0 +1,10 @@
+<h1>{% if detail %}Edit{% else %}Create{% endif %} Detail</h1>
+<form method="POST">
+  {% csrf_token %}
+  <label>Title:</label>
+  <input type="text" name="title" value="{{ detail.title|default:'' }}">
+  <label>Description:</label>
+  <textarea name="description">{{ detail.description|default:'' }}</textarea>
+  <button type="submit">Save</button>
+</form>
+<a href="/">Cancel</a>

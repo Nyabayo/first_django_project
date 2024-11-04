@@ -1,0 +1,7 @@
+<h1>Detail List</h1>
+<ul>
+  {% for detail in details %}
+    <li><a href="{{ detail.pk }}/">{{ detail.title }}</a></li>
+  {% endfor %}
+</ul>
+<a href="new/">Add New Detail</a>
